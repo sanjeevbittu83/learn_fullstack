@@ -1,0 +1,30 @@
+body{
+    text-align: center;
+    margine:0px;
+
+}
+.page-heading{
+color:red;
+}
+.contact-list-container ul{
+    padding: 0;
+    list-style: none;
+}
+.contact.details{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+}
+.contact.delete-button{
+    width: 10%;
+    padding: 3px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.contact.p{
+    margin: 5px 0;
+
+}

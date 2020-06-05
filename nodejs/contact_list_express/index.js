@@ -6,6 +6,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join( __dirname, 'views'));
 app.use(express.urlencoded());
 
+app.use(express.static('assets'));
 var contactlist=[
     {
         name:"sanjeev",
@@ -39,12 +40,18 @@ app.post('/create-contact',function(req,res){
 //       name:req.body.name,
 //       phone:req.body.phone
 //   });
-console.log('hello');
-console.log(req.body.name);
-console.log(req.body.phone);
+ 
 contactlist.push(req.body);
  return res.redirect('/');
 }); 
+ app.get('/delete-contact',function(req,res){
+     let phone=req.query.phone;
+ let contactIndex=contactlist.findIndex(contact=>contact.phone==phone);
+ if(contactIndex!=-1){
+     contactlist.splice(contactIndex,1);
+ }
+ return res.redirect('back');
+ });
 
 app.listen(port, function (err) {
     if (err) {

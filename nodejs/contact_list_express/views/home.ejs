@@ -1,25 +1,39 @@
 <html>
     <head>
 <title>
-    <%=locals.title %>
+    <%=title %>
 </title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/home.css">
+
     </head>
     <body>
-        <h1>contsct list</h1>
-        <div>
-            <ol>
+        <h1 class="page-heading">contact list</h1>
+        <i class="fas fa-address-card"></i>
+        <div id="contact-list-container">
+            <ul>
                 <% for(let i of contact_list){%>
-<li>
+<li class="contact">
+    <div class="details">
     <p><%= i.name%></p>
     <p><%= i.phone%></p>
+</div>
+<div class="delete-button"> 
+<a href="/delete-contact/?phone=<%=i.phone%>">
+    <i class="fas fa-window-close"></i>
+</a>
+</div>
 </li>
-               <% }%>
-            </ol>
+               <%}%>
+            </ul>
         </div>
         <form action="/create-contact" method="POST">
         <input type="text" name="name" placeholder="enter name">
         <input type="text" name="phone" placeholder="enter phone">
         <button type="submit">ADD CONTACT</button>
     </form>
-    </body>
+ 
+    <script type="text/javascript" src="/js/home.js"></script>
+    <script src="https://kit.fontawesome.com/066dcca5cb.js" crossorigin="anonymous"></script>
+</body>
 </html>
