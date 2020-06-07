@@ -6,25 +6,46 @@ body{
 .page-heading{
 color:red;
 }
-.contact-list-container ul{
-    padding: 0;
+.details p{
+    display: inline-block;
+    padding-right: 20%;
+    margin: 2px;
+}
+.delete-button {
+    display: inline-block;
+}
+.details {
+    display: inline-block;
+    width:100%;
+    margin: 0px;
+    background-color: aqua;
+}
+h1 {
+    display: inline-block;
+}
+li {
     list-style: none;
+     width: 30%;
+       margin: auto;
 }
-.contact.details{
+
+li {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 90%;
-}
-.contact.delete-button{
-    width: 10%;
-    padding: 3px;
-    text-align: center;
-    margin-top: 5px;
+     flex-direction: row; 
+     justify-content: space-between;
+      align-items: center;
 }
 
-.contact.p{
-    margin: 5px 0;
+li .details {
+    flex-grow: 1;
+     display: flex;
+     margin: 0px;
+     flex-direction: row;
+     justify-content: space-between;
 
+}
+
+ul {
+    margin:0px;
+   
 }
