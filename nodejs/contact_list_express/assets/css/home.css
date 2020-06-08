@@ -4,8 +4,9 @@ body{
 
 }
 .page-heading{
-color:red;
+color:rgb(124, 65, 65);
 }
+
 .details p{
     display: inline-block;
     padding-right: 20%;
@@ -18,14 +19,15 @@ color:red;
     display: inline-block;
     width:100%;
     margin: 0px;
-    background-color: aqua;
 }
 h1 {
     display: inline-block;
+    font-family: cursive;
+    font-style: italic;
 }
 li {
     list-style: none;
-     width: 30%;
+     width: 35%;
        margin: auto;
 }
 
@@ -43,9 +45,20 @@ li .details {
      flex-direction: row;
      justify-content: space-between;
 
+
 }
+
 
 ul {
     margin:0px;
    
+}
+ .contact p{
+background-color: antiquewhite;
+border-radius: 1px;
+width: 100%;
+}
+p:hover{
+    color:blueviolet;
+    font-size: large;
 }
