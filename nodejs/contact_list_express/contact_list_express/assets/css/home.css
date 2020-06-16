@@ -1,0 +1,64 @@
+body{
+    text-align: center;
+    margine:0px;
+
+}
+.page-heading{
+color:rgb(124, 65, 65);
+}
+
+.details p{
+    display: inline-block;
+    padding-right: 20%;
+    margin: 2px;
+}
+.delete-button {
+    display: inline-block;
+}
+.details {
+    display: inline-block;
+    width:100%;
+    margin: 0px;
+}
+h1 {
+    display: inline-block;
+    font-family: cursive;
+    font-style: italic;
+}
+li {
+    list-style: none;
+     width: 35%;
+       margin: auto;
+}
+
+li {
+    display: flex;
+     flex-direction: row; 
+     justify-content: space-between;
+      align-items: center;
+}
+
+li .details {
+    flex-grow: 1;
+     display: flex;
+     margin: 0px;
+     flex-direction: row;
+     justify-content: space-between;
+
+
+}
+
+
+ul {
+    margin:0px;
+   
+}
+ .contact p{
+background-color: antiquewhite;
+border-radius: 1px;
+width: 100%;
+}
+p:hover{
+    color:blueviolet;
+    font-size: large;
+}
