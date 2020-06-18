@@ -1,12 +1,20 @@
+// use database
+
 const mongoose=require('mongoose');
 
 
 const contactSchema=new mongoose.Schema({
-    name:{
+    work:{
         type:String,
         required:true
     },
-    phone:{
+    date:{
+        type:Date,
+        required:true
+    },
+
+
+    ttype:{
         type:String,
         required:true
     }

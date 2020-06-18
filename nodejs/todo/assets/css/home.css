@@ -1,6 +1,8 @@
 body{
     text-align: center;
     margine:0px;
+    width: auto;
+    
 
 }
 .page-heading{
@@ -11,6 +13,9 @@ color:rgb(124, 65, 65);
     display: inline-block;
     padding-right: 20%;
     margin: 2px;
+    font-style: italic;
+    font-weight: bold;
+    overflow-wrap: break-word;
 }
 .delete-button {
     display: inline-block;
@@ -54,11 +59,16 @@ ul {
    
 }
  .contact p{
-background-color: antiquewhite;
+background-color: rgb(196, 161, 116);
 border-radius: 1px;
 width: 100%;
 }
 p:hover{
     color:blueviolet;
     font-size: large;
+}
+i{
+size: 50px;
+margin-left: 15px;
+font-size:xx-large;
 }

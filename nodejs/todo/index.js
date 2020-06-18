@@ -12,16 +12,16 @@ app.use(express.urlencoded());
 
 app.use(express.static('assets'));
 var contactlist=[
-    {
-        name:"sanjeev",
-        phone:"11111"
-    },
-    {
-        name:"bittu",
-        phone:"12121"
-    }
+    // {
+    //     name:"sanjeev",
+    //     phone:"11111"
+    // },
+    // {
+    //     name:"bittu",
+    //     phone:"12121"
+    // }
 ]
-//FETCHING THE CONTACT LIST;
+//FETCHING THE todo app;
 app.get('/', function (req, res) {
     Contact.find({},function(err,contacts){
 if(err){
@@ -30,7 +30,7 @@ if(err){
 }
 return res.render(
     'home', {
-        title: "contact list",
+        title: "TODO APP",
         contact_list:contacts
     });
     // return res.render(
@@ -62,8 +62,9 @@ app.post('/create-contact',function(req,res){
 
 //insert into database
 Contact.create({
-    name:req.body.name,
-    phone:req.body.phone
+    work:req.body.work,
+    date:req.body.date,
+    ttype:req.body.ttype
 },function(err,newContact){
     if(err){
         console.log('error to creating contact list');
@@ -73,11 +74,11 @@ Contact.create({
     return res.redirect('back');
 });
 }); 
-//DELETE CONTACT
+//DELETE TASK
  app.get('/delete-contact',function(req,res){
      //GET THE ID FROM QUERY IN THE URL;
      let id=req.query.id;
-     //FIND THE CONTACT IN DATABASE USIND ID AND DELETE
+     //FIND THE task IN DATABASE USIND ID AND DELETE
 Contact.findByIdAndDelete(id,function(err){
 if(err){
     console.log('error to delete contact');

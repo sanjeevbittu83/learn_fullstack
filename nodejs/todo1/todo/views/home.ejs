@@ -8,16 +8,18 @@
 
     </head>
     <body>
-        <i class="fas fa-address-card"></i>
-        <h1 class="page-heading">contact list</h1>
+        <!-- heading -->
+        <i class="fas fa-th-list"></i>
+        <h1 class="page-heading">TODO APP</h1>
         
         <div id="contact-list-container">
             <ul>
                 <% for(let i of contact_list){%>
 <li class="contact">
     <div class="details">
-    <p><%= i.name%></p>
-    <p><%= i.phone%></p>
+    <p><%= i.work%></p>
+    <p><%= i.date%></p>
+    <p><%=i.ttype%></p>
 </div>
 <div class="delete-button"> 
 <a href="/delete-contact/?id=<%=i._id%>">
@@ -28,10 +30,16 @@
                <%}%>
             </ul>
         </div>
+        <!-- form to enter details -->
         <form action="/create-contact" method="POST">
-        <input type="text" name="name" placeholder="enter name">
-        <input type="text" name="phone" placeholder="enter phone">
-        <button type="submit">ADD CONTACT</button>
+        <input type="text" name="work" placeholder="enter task">
+        <input type="date" name="date" placeholder="enter date">
+        <select name="ttype" id="work-type">
+            <option value="study">study</option>
+            <option value="work">work</option>
+            <option value="sports">sports</option>
+          </select>
+        <button type="submit">ADD TASK</button>
     </form>
  
     <script type="text/javascript" src="/js/home.js"></script>
